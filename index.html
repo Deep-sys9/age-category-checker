@@ -118,9 +118,13 @@
       localStorage.setItem("age", age);
 
       let category = "";
-      if (age < 18) {
-        category = "Minor";
+      if (age < 12) {
+        category = "Child";
         result.style.color = "#00FFFF";
+      }
+      else if (age <= 17) {
+        category = "Minor";
+        result.style.color = "#FFD700";
       } else if (age >= 60) {
         category = "Senior Citizen";
         result.style.color = "#FFD700";
